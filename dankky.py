@@ -1,4 +1,4 @@
-
+#in the command line type 'pip install PyAutoGUI' and 'pip install keyboard'
 from time import sleep
 import random
 import keyboard
@@ -17,7 +17,7 @@ print('''
 
 
 
-By: User.
+By: User./Black Rose
 ''')
 
 if keyboard.read_key() == 'i':
@@ -26,7 +26,7 @@ if keyboard.read_key() == 'i':
       Information
   ---------------------
   This is a Dank Memer Hack
-  made my me "User." I have 
+  made my me "User./Black Rose" I have 
   tested this hack and it is
   almost impossible to get 
   banned but if you do you 
