@@ -20,8 +20,7 @@ print('''
   ready and the ding sound is 
   played you have 20 Sec.if the
   mouse is not moving to the right 
-  stop rerun the
-  bot
+  stop rerun the bot
 ''')
 
 class POINT(Structure):
@@ -69,7 +68,8 @@ if choice == '1':
   it is almost impossible to get 
   banned but if you do you 
   are responsible for using 
-  this 
+  this make sure to have a lot
+  of life savers
   
 
   ''')
