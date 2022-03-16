@@ -1,8 +1,5 @@
-# Dank-Memer-Bot
-Update 0.2.1
-- Use search
-- Use crime
+# Dank
+This is a Dank Memer Bot that can:
+- Sell 
 
-In a future Update...
-- Ding when ready
-
+#Step 1
