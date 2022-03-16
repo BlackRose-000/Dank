@@ -1,8 +1,8 @@
 # Dank-Memer-Bot
-Update 0.1.1
-- D.M.B can now sell Items
+Update 0.2.1
+- Use search
+- Use crime
 
 In a future Update...
 - Ding when ready
-- Use search
-- Use crime
+
