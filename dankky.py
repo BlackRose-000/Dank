@@ -6,19 +6,21 @@ import pyautogui
 import os
 from ctypes import windll, Structure, c_long, byref
 
+
 clear = lambda: os.system('cls' if os.name in ('nt', 'dos') else 'clear')
 
 s=False
-
+sc=False
 print('''
         IMPORTANT 
   ----------------------
   Use the command  pls sell 
   and put your mouse above the 
-  confirm button until it say
-  ready you have 20 Sec.if 
-  the mouse is not moving 
-  to the right stop rerun the
+  confirm button until it says
+  ready and the ding sound is 
+  played you have 20 Sec.if the
+  mouse is not moving to the right 
+  stop rerun the
   bot
 ''')
 
@@ -48,10 +50,10 @@ print('''
   1 ~ Information
   2 ~ Version
   3 ~ Normal Run 
-  4 ~ Crime #not relessed 
+  4 ~ Crime # if you are ok with crimes
          
 
-                        Vers 0.0.2
+                        Vers 0.2.1
 ''')
 
 choice = input("Chocie: ")
@@ -76,7 +78,7 @@ if choice == '1':
 
 elif choice == '2':
   clear()
-  print('Verison 0.0.2')
+  print('Verison 0.2.1')
   sleep(3)
   clear()
 
@@ -97,6 +99,24 @@ elif choice == '3':
   print('The Bot will start in 1 ...')
   sleep(1)
   s = True
+  clear()
+elif choice == '4':
+  clear()
+  print('The Bot will start in 5 ...')
+  sleep(1)
+  clear()
+  print('The Bot will start in 4 ...')
+  sleep(1)
+  clear()
+  print('The Bot will start in 3 ...')
+  sleep(1)
+  clear()
+  print('The Bot will start in 2 ...')
+  sleep(1)
+  clear()
+  print('The Bot will start in 1 ...')
+  sleep(1)
+  sc = True
   clear()
 else:
   clear()
@@ -144,6 +164,56 @@ while(s):
   pyautogui.typewrite("pls beg")
   waitS()
   pyautogui.press('enter')
+  pyautogui.typewrite('pls search')
+  waitS()
+  pyautogui.press('enter')
+  waitS()
+  pyautogui.moveTo(pos)
+  pyautogui.leftClick(pos)
+  pyautogui.move(0, 50 , 1 , pyautogui.easeInQuad) 
+  pyautogui.leftClick(pos)
+  pyautogui.typewrite('pls sell')
+  waitS()
+  pyautogui.press('enter')
+  waitS()
+  pyautogui.moveTo(pos)
+  pyautogui.leftClick(pos)
+  pyautogui.move(0, 50 , 1 , pyautogui.easeInQuad) 
+  pyautogui.leftClick(pos)
+  waste()
+  waitS()
+  pyautogui.press('enter')
+  waitL()
+
+while(s):
+  pyautogui.typewrite("pls dig")
+  waitS()
+  pyautogui.press("enter")
+  pyautogui.typewrite("pls fish")
+  waitS()
+  pyautogui.press('enter')
+  pyautogui.typewrite("pls hunt")
+  waitS()
+  pyautogui.press('enter')
+  pyautogui.typewrite("pls beg")
+  waitS()
+  pyautogui.press('enter')
+  pyautogui.typewrite('pls search')
+  waitS()
+  pyautogui.press('enter')
+  waitS()
+  pyautogui.moveTo(pos)
+  pyautogui.leftClick(pos)
+  pyautogui.move(0, 50 , 1 , pyautogui.easeInQuad) 
+  pyautogui.leftClick(pos)
+  pyautogui.typewrite('pls crime')
+  waitS()
+  pyautogui.press('enter')
+  waitS()
+  pyautogui.moveTo(pos)
+  pyautogui.leftClick(pos)
+  pyautogui.move(0, 50 , 1 , pyautogui.easeInQuad) 
+  pyautogui.leftClick(pos)
   pyautogui.typewrite('pls sell')
   waitS()
   pyautogui.press('enter')
