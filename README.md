@@ -7,7 +7,11 @@
 	<img src=https://img.shields.io/github/forks/BlackRose-000/Dank-Memer-Bot?style=for-the-badge&logo=Python&color=blue/>
 
 </div>
-  
+	
+![image](https://user-images.githubusercontent.com/89435091/158882727-e356acb3-05ce-4234-998f-28c776505fe3.png)
+
+
+	
 ## What is Dank?
   Dank is a bot/script that was Made by ```BlackRose-000``` / ```User.``` Dank Memer grinder that automatically send commands every few seconds. This project was made using Python So you sould download that before using this. You can also now download the exe version you don't have to download anything for that one and it is just one prossess you can find it on the relesses page and extract the exe file from there it is on the right of your screen. When you download the file  windows might say it is not safe but that is normal.
 
