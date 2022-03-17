@@ -5,22 +5,77 @@ import keyboard
 import pyautogui
 import os
 from ctypes import windll, Structure, c_long, byref
-
+from datetime import datetime
+s=False
 
 clear = lambda: os.system('cls' if os.name in ('nt', 'dos') else 'clear')
 
-s=False
-sc=False
+
+beg = True
+dig=True
+hunt =True
+fish=True
+crime=True
+search=True
+pm=True
+sell = True
+
+Setting = input('''
+
+┏━━━┓╋╋┏┓╋┏┓
+┃┏━┓┃╋┏┛┗┳┛┗┓
+┃┗━━┳━┻┓┏┻┓┏╋┳━┓┏━━┳━━┓
+┗━━┓┃┃━┫┃╋┃┃┣┫┏┓┫┏┓┃━━┫
+┃┗━┛┃┃━┫┗┓┃┗┫┃┃┃┃┗┛┣━━┃
+┗━━━┻━━┻━┛┗━┻┻┛┗┻━┓┣━━┛
+╋╋╋╋╋╋╋╋╋╋╋╋╋╋╋╋┏━┛┃
+╋╋╋╋╋╋╋╋╋╋╋╋╋╋╋╋┗━━┛
+
+Type the letters of the commands you want to remove then press 'Enter' you do not
+need to add any spaces if you don't want to remove any then press 'Enter' 
+
+b ~ Beg
+d ~ Dig
+h ~ Hunt
+f ~ Fish
+c ~ Crime 
+s ~ Search
+p ~ Pm
+
+
+''')
+
+if 'b' in Setting:
+  beg = False
+if 'd' in Setting:
+  dig = False
+if 'h' in Setting:
+  hunt= False
+if 'f' in Setting:
+  fish = False
+if 'c' in Setting:
+  crime = False
+if 's' in Setting:
+  search = False
+if 'p' in Setting:
+  pm = False
+
+
+clear()
 print('''
-        IMPORTANT 
-  ----------------------
-  Use the command  pls sell 
-  and put your mouse above the 
-  confirm button until it says
-  ready and the ding sound is 
-  played you have 20 Sec.if the
-  mouse is not moving to the right 
-  stop rerun the bot
+  
+██████╗░░█████╗░███╗░░██╗██╗░░██╗
+██╔══██╗██╔══██╗████╗░██║██║░██╔╝
+██║░░██║███████║██╔██╗██║█████═╝░
+██║░░██║██╔══██║██║╚████║██╔═██╗░
+██████╔╝██║░░██║██║░╚███║██║░╚██╗
+╚═════╝░╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚═╝
+
+IMPORTANT: Use the command  'pls sell' and put your mouse above\nthe confirm button until it says ready and the ding sound is \nplayed you have 20 Sec.if the mouse is not moving to the right way\nstop rerun the bot
+
+GITHUB: https://github.com/BlackRose-000/Dank-Memer-Bot
+
+INSTALLED VERSION: v0.2.2
 ''')
 
 class POINT(Structure):
@@ -32,96 +87,10 @@ def queryMousePosition():
     pt = POINT()
     sleep(20)
     windll.user32.GetCursorPos(byref(pt))
-    clear()
-    print("READY ")
-    sleep(3)
-    clear()
+    print('Dank : READY\n')
     return pt.x, pt.y
-
+s=True
 pos=queryMousePosition()
-
-
-
-
-print('''
-      Dank Memer BOT 
-  -------------------------
-  1 ~ Information
-  2 ~ Version
-  3 ~ Normal Run 
-  4 ~ Crime # if you are ok with crimes
-         
-
-                        Vers 0.2.1
-''')
-
-choice = input("Chocie: ")
-
-if choice == '1':
-  clear()
-  print('''
-          Information
-  -----------------------------
-  This is a Dank Memer Bot
-  made my me "User./Black Rose" 
-  I have tested this bot/script and
-  it is almost impossible to get 
-  banned but if you do you 
-  are responsible for using 
-  this make sure to have a lot
-  of life savers
-  
-
-  ''')
-  sleep(20)
-  clear()
-
-elif choice == '2':
-  clear()
-  print('Verison 0.2.1')
-  sleep(3)
-  clear()
-
-elif choice == '3':
-  clear()
-  print('The Bot will start in 5 ...')
-  sleep(1)
-  clear()
-  print('The Bot will start in 4 ...')
-  sleep(1)
-  clear()
-  print('The Bot will start in 3 ...')
-  sleep(1)
-  clear()
-  print('The Bot will start in 2 ...')
-  sleep(1)
-  clear()
-  print('The Bot will start in 1 ...')
-  sleep(1)
-  s = True
-  clear()
-elif choice == '4':
-  clear()
-  print('The Bot will start in 5 ...')
-  sleep(1)
-  clear()
-  print('The Bot will start in 4 ...')
-  sleep(1)
-  clear()
-  print('The Bot will start in 3 ...')
-  sleep(1)
-  clear()
-  print('The Bot will start in 2 ...')
-  sleep(1)
-  clear()
-  print('The Bot will start in 1 ...')
-  sleep(1)
-  sc = True
-  clear()
-else:
-  clear()
-  print('That is not one of the options...')
-  sleep(3)
 
 
 def waste():
@@ -151,69 +120,65 @@ def waitS():
   sleep(timeS)
 
 
-while(s):
-  pyautogui.typewrite("pls dig")
-  waitS()
-  pyautogui.press("enter")
-  pyautogui.typewrite("pls fish")
-  waitS()
-  pyautogui.press('enter')
-  pyautogui.typewrite("pls hunt")
-  waitS()
-  pyautogui.press('enter')
-  pyautogui.typewrite("pls beg")
-  waitS()
-  pyautogui.press('enter')
-  pyautogui.typewrite('pls search')
-  waitS()
-  pyautogui.press('enter')
-  waitS()
-  pyautogui.moveTo(pos)
-  pyautogui.leftClick(pos)
-  pyautogui.move(0, 50 , 1 , pyautogui.easeInQuad) 
-  pyautogui.leftClick(pos)
-  pyautogui.typewrite('pls sell')
-  waitS()
-  pyautogui.press('enter')
-  waitS()
-  pyautogui.moveTo(pos)
-  pyautogui.leftClick(pos)
-  pyautogui.move(0, 50 , 1 , pyautogui.easeInQuad) 
-  pyautogui.leftClick(pos)
-  waste()
-  waitS()
-  pyautogui.press('enter')
-  waitL()
+
+
+current_time = datetime.now()
+Dank='\033[32m[Dank]\u001b[0m'
+
+
 
 while(s):
-  pyautogui.typewrite("pls dig")
-  waitS()
-  pyautogui.press("enter")
-  pyautogui.typewrite("pls fish")
-  waitS()
-  pyautogui.press('enter')
-  pyautogui.typewrite("pls hunt")
-  waitS()
-  pyautogui.press('enter')
-  pyautogui.typewrite("pls beg")
-  waitS()
-  pyautogui.press('enter')
-  pyautogui.typewrite('pls search')
-  waitS()
-  pyautogui.press('enter')
-  waitS()
-  pyautogui.moveTo(pos)
-  pyautogui.leftClick(pos)
-  pyautogui.move(0, 50 , 1 , pyautogui.easeInQuad) 
-  pyautogui.leftClick(pos)
-  pyautogui.typewrite('pls crime')
-  waitS()
-  pyautogui.press('enter')
-  waitS()
-  pyautogui.moveTo(pos)
-  pyautogui.leftClick(pos)
-  pyautogui.move(0, 50 , 1 , pyautogui.easeInQuad) 
-  pyautogui.leftClick(pos)
+  if dig == True:
+    pyautogui.typewrite("pls dig")
+    waitS()
+    pyautogui.press("enter")
+    print(f"[{current_time}] - [{Dank}] | Successfully sent commmand 'pls dig' ")
+  if fish==True:
+    pyautogui.typewrite("pls fish")
+    waitS()
+    pyautogui.press('enter')
+    print(f"[{current_time}] - [{Dank}] | Successfully sent commmand 'pls fish' ")
+  if hunt==True:
+    pyautogui.typewrite("pls hunt")
+    waitS()
+    pyautogui.press('enter')
+    print(f"[{current_time}] - [{Dank}] | Successfully sent commmand 'pls hunt' ")
+  if beg == True:
+    pyautogui.typewrite("pls beg")
+    waitS()
+    pyautogui.press('enter')
+    print(f"[{current_time}] - [{Dank}] | Successfully sent commmand 'pls beg' ")
+  if search == True:
+    pyautogui.typewrite('pls search')
+    waitS()
+    pyautogui.press('enter')
+    print(f"[{current_time}] - [{Dank}] | Successfully sent commmand 'pls search' ")
+    waitS()
+    pyautogui.moveTo(pos)
+    pyautogui.leftClick(pos)
+    pyautogui.move(0, 50 , 1 , pyautogui.easeInQuad) 
+    pyautogui.leftClick(pos)
+  if crime == True:
+    pyautogui.typewrite('pls crime')
+    waitS()
+    pyautogui.press('enter')
+    waitS()
+    pyautogui.moveTo(pos)
+    pyautogui.leftClick(pos)
+    pyautogui.move(0, 50 , 1 , pyautogui.easeInQuad) 
+    pyautogui.leftClick(pos)
+    print(f"[{current_time}] - [{Dank}] | Successfully sent commmand 'pls crime' ")
+  if pm == True:
+    pyautogui.typewrite('pls pm')
+    waitS()
+    pyautogui.press('enter')
+    waitS()
+    pyautogui.moveTo(pos)
+    pyautogui.leftClick(pos)
+    pyautogui.move(0, 50 , 1 , pyautogui.easeInQuad) 
+    pyautogui.leftClick(pos)
+    print(f"[{current_time}] - [{Dank}] | Successfully sent commmand 'pls pm' ")
+
   pyautogui.typewrite('pls sell')
   waitS()
   pyautogui.press('enter')
@@ -221,6 +186,7 @@ while(s):
   pyautogui.moveTo(pos)
   pyautogui.leftClick(pos)
   pyautogui.move(0, 50 , 1 , pyautogui.easeInQuad) 
+  print(f"[{current_time}] - [{Dank}] | Successfully sent commmand 'pls sell' ")
   pyautogui.leftClick(pos)
   waste()
   waitS()
