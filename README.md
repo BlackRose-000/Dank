@@ -12,12 +12,14 @@
   Dank is a bot/script that was Made by ```BlackRose-000``` / ```User.``` Dank Memer grinder that automatically send commands every few seconds. This project was made using Python So you sould download that before using this.
   - [Python](https://python.org/downloads)
 ## Commands Dank can use:
+  - ``pls pm``
   - ``pls beg``
   - ``pls dig``
   - ``pls hunt``
   - ``pls fish``
   - ``pls crime``
   - ``pls search``
+
  
   ## Setting up Dank
   - Download :
