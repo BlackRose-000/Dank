@@ -9,10 +9,11 @@
 </div>
   
 ## What is Dank?
-  Dank is a bot/script that was Made by ```BlackRose-000``` / ```User.``` Dank Memer grinder that automatically send commands every few seconds. This project was made using Python So you sould download that before using this. You can also now download the exe version you don't have to download anything for that one and it is just on prossess you can find it on the relesses page and extract the exe file from there it is on the right of your screen. When you download the file  windows might say it is not safe but that is normal.
-![image](https://user-images.githubusercontent.com/89435091/158724003-09307f13-5b27-46c0-ad4c-2bc97ca3fe39.png)
+  Dank is a bot/script that was Made by ```BlackRose-000``` / ```User.``` Dank Memer grinder that automatically send commands every few seconds. This project was made using Python So you sould download that before using this. You can also now download the exe version you don't have to download anything for that one and it is just one prossess you can find it on the relesses page and extract the exe file from there it is on the right of your screen. When you download the file  windows might say it is not safe but that is normal.
 
   - [Python](https://python.org/downloads)
+![image](https://user-images.githubusercontent.com/89435091/158724264-336e0b02-807b-491a-8547-61603982687e.png)
+
 ## Commands Dank can use:
   - ``pls pm``
   - ``pls beg``
