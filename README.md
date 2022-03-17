@@ -9,7 +9,7 @@
 </div>
   
 ## What is Dank?
-  Dank is a bot/script that was Made by ```BlackRose-000``` / ```User.``` Dank Memer grinder that automatically send commands every few seconds. This project was made using Python So you sould download that before using this.
+  Dank is a bot/script that was Made by ```BlackRose-000``` / ```User.``` Dank Memer grinder that automatically send commands every few seconds. This project was made using Python So you sould download that before using this. You can also now download the exe version you don't have to download anything for that one and it is just on prossess
   - [Python](https://python.org/downloads)
 ## Commands Dank can use:
   - ``pls pm``
