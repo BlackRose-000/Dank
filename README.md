@@ -37,7 +37,7 @@
 
   https://user-images.githubusercontent.com/89435091/158713924-2a11e040-563d-449e-aeec-d6321441fd35.mp4
 
-
+Source: https://www.youtube.com/watch?v=eFshRBiRi_I&ab_channel=GeekyScript
 
 ## Warning
   This is a self-bot (According to Discord). Self-bots are against Discord's TOS. Automation of Dank Memer commands also breaks Dank Memer's rules. By using this program you agree that I am not responsibility for actions taken against you if you are caught.
