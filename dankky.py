@@ -154,12 +154,12 @@ def tip():
   pyautogui.press("enter")
   pyautogui.typewrite('pls use tipjar') 
   pyautogui.press("enter")
-
+pmin = 60*15
 while (s):
   if tipjar== True:
-    threading.Timer(20, tip).start()
+    threading.Timer(360, tip).start()
   
-  threading.Timer(25, pizza).start()
+  threading.Timer(pmin, pizza).start()
   
   if dig == True:
     pyautogui.typewrite("pls dig")
