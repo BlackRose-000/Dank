@@ -63,6 +63,9 @@ if 'p' in Setting:
 if 'N' in Setting:
   search = False
   crime = False
+if 'c' in Setting:
+  crime = Falsefish
+  
 if 'y' in Setting1:
   tipjar=True
 else:
@@ -136,8 +139,6 @@ def waitS():
   sleep(timeS)
 
 
-
-
 current_time = datetime.now()
 Dank='\033[32m[Dank]\u001b[0m'
 x=0
@@ -148,13 +149,43 @@ def pizza():
     pyautogui.typewrite('pls use pizza') 
     pyautogui.press("enter")
     Setting2 -= 1
-    
+
+def Clickbutn2():
+  pyautogui.leftClick(865,688)
+
+def Clickbutn():
+  waitS()
+  sleep(1)
+  pyautogui.leftClick(pos)
+  Clickbutn2()
+def hl():
+  global pos
+  pyautogui.press("enter")
+  pyautogui.typewrite('pls hl') 
+  waitS()
+  pyautogui.press("enter")
+  waitS()
+  jackhl =[1,2,3]
+  jackhl=random.choice(jackhl)
+  if jackhl == 1:
+    pyautogui.leftClick(pos)
+  if jackhl == 2:
+    pyautogui.moveTo(pos)
+    pyautogui.move(75,0)
+    pyautogui.leftClick()
+  if jackhl == 3:
+    pyautogui.moveTo(pos)
+    pyautogui.move(-75,0)
+    pyautogui.leftClick()
+  sleep(2)
+  Clickbutn2()
+
 
 def tip():
   pyautogui.press("enter")
   pyautogui.typewrite('pls use tipjar') 
   pyautogui.press("enter")
-pmin = 60*15
+pmin = 60*60
 while (s):
   if tipjar== True:
     threading.Timer(360, tip).start()
@@ -172,20 +203,14 @@ while (s):
     pyautogui.press('enter')
     print(f"[{current_time}] - {Dank} | Successfully sent commmand 'pls fish' ")
     waitS()
-    pyautogui.moveTo(pos)
-    pyautogui.leftClick(pos)
-    pyautogui.move(0, 50 , 1 , pyautogui.easeInQuad) 
-    pyautogui.leftClick(pos)
+    Clickbutn()
   if hunt==True:
     pyautogui.typewrite("pls hunt")
     waitS()
     pyautogui.press('enter')
     print(f"[{current_time}] - {Dank} | Successfully sent commmand 'pls hunt' ")
     waitS()
-    pyautogui.moveTo(pos)
-    pyautogui.leftClick(pos)
-    pyautogui.move(0, 50 , 1 , pyautogui.easeInQuad) 
-    pyautogui.leftClick(pos)
+    Clickbutn()
   if beg == True:
     pyautogui.typewrite("pls beg")
     waitS()
@@ -197,42 +222,34 @@ while (s):
     pyautogui.press('enter')
     print(f"[{current_time}] - {Dank} | Successfully sent commmand 'pls search' ")
     waitS()
-    pyautogui.moveTo(pos)
-    pyautogui.leftClick(pos)
-    pyautogui.move(0, 50 , 1 , pyautogui.easeInQuad) 
-    pyautogui.leftClick(pos)
+    Clickbutn()
   if crime == True:
     pyautogui.typewrite('pls crime')
     waitS()
     pyautogui.press('enter')
     waitS()
-    pyautogui.moveTo(pos)
-    pyautogui.leftClick(pos)
-    pyautogui.move(0, 50 , 1 , pyautogui.easeInQuad) 
-    pyautogui.leftClick(pos)
+
+    Clickbutn()
     print(f"[{current_time}] - {Dank} | Successfully sent commmand 'pls crime' ")
   if pm == True:
     pyautogui.typewrite('pls pm')
     waitS()
     pyautogui.press('enter')
     waitS()
-    pyautogui.moveTo(pos)
-    pyautogui.leftClick(pos)
-    pyautogui.move(0, 50 , 1 , pyautogui.easeInQuad) 
-    pyautogui.leftClick(pos)
+    Clickbutn()
     print(f"[{current_time}] - {Dank} | Successfully sent commmand 'pls pm' ")
-
   pyautogui.typewrite('pls sell')
   waitS()
   pyautogui.press('enter')
   waitS()
-  pyautogui.moveTo(pos)
-  pyautogui.leftClick(pos)
-  pyautogui.move(0, 50 , 1 , pyautogui.easeInQuad) 
+  Clickbutn()
   print(f"[{current_time}] - {Dank} | Successfully sent commmand 'pls sell' ")
   pyautogui.leftClick(pos)
+  hl()
+  waitS()
   waste()
   waitS()
   pyautogui.press('enter')
   waitL()
 
+  Clickbutn2()
