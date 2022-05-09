@@ -20,6 +20,7 @@ search=True
 pm=True
 sell = True
 crime=True
+printing=True
 Setting = input('''
 
 ┏━━━┓╋╋┏┓╋┏┓
@@ -33,9 +34,12 @@ Setting = input('''
 
 Type the letters of the commands you want to remove then press 'Enter' you do not
 need to add any spaces if you don't want to remove any then press 'Enter' or you can
-do 'N' if you do not want anything that might make you die
+do 'n' if you do not want anything that might make you die. You can also press 'u' if 
+you don't want to see the commands that were used If you leave it on it will cause a
+small amount of lag.
 
-DISCLAIMER - Regradless of what the bot does there is still a chance for you to die.
+DISCLAIMER - Regradless of what the bot does there is still a chance for you to die. So I
+Reccomend you get a pet so evn if you die you gie life savers.
 
 b ~ Beg
 d ~ Dig
@@ -43,10 +47,13 @@ h ~ Hunt
 f ~ Fish
 s ~ Search
 p ~ Pm 
+c ~ Crime
                                       Input: ''')
 
 
 Setting1 = input('Do you have a \'Tip Jar\' (y/n): ')
+Setting3 = input('Do you have a \'Stonk Machine\' (y/n): ')
+stock=False
 tipjar=False
 if 'b' in Setting:
   beg = False
@@ -63,13 +70,21 @@ if 'p' in Setting:
 if 'N' in Setting:
   search = False
   crime = False
+if 'n' in Setting:
+  search = False
+  crime = False
 if 'c' in Setting:
-  crime = Falsefish
-  
+  crime = False
+if 'u' in Setting:
+  printing= False
 if 'y' in Setting1:
   tipjar=True
 else:
   tipjar == False
+if 'y' in Setting3:
+  stock=True
+else:
+  stock == False
 isint = True
 while (isint):
     Setting2 =input("How many 'Pizzas' do you want to use : ")
@@ -80,7 +95,11 @@ while (isint):
         print("Type in a number.")
         sleep(2)
         clear()
+
+Setting2=Setting2*15
+
 clear()
+
 print('''
   
 ██████╗░░█████╗░███╗░░██╗██╗░░██╗
@@ -134,6 +153,7 @@ def waitL():
   sleep(timeL)
 
 def waitS(): 
+  global timeS
   timeS=[2,3.5,4.6,1]
   timeS = random.choice(timeS)
   sleep(timeS)
@@ -146,16 +166,21 @@ def pizza():
   global Setting2,x
   if Setting2 != x:
     pyautogui.press("enter")
+    sleep(3)
+    pyautogui.press("enter")
     pyautogui.typewrite('pls use pizza') 
+    sleep(3)
     pyautogui.press("enter")
     Setting2 -= 1
 
 def Clickbutn2():
   pyautogui.leftClick(865,688)
+  pyautogui.leftClick(865,688)
 
 def Clickbutn():
   waitS()
   sleep(1)
+  pyautogui.leftClick(pos)
   pyautogui.leftClick(pos)
   Clickbutn2()
 def hl():
@@ -164,6 +189,7 @@ def hl():
   pyautogui.typewrite('pls hl') 
   waitS()
   pyautogui.press("enter")
+  sleep(2)
   waitS()
   jackhl =[1,2,3]
   jackhl=random.choice(jackhl)
@@ -180,47 +206,56 @@ def hl():
   sleep(2)
   Clickbutn2()
 
+def stonk():
+  sleep(7)
+  pyautogui.press("enter")
+  pyautogui.typewrite('pls use stonk') 
+  sleep(7)
+  pyautogui.press("enter")
 
 def tip():
   pyautogui.press("enter")
+  sleep(10)
+  pyautogui.press("enter")
   pyautogui.typewrite('pls use tipjar') 
+  sleep(10)
   pyautogui.press("enter")
 pmin = 60*60
 while (s):
-  if tipjar== True:
-    threading.Timer(360, tip).start()
-  
-  threading.Timer(pmin, pizza).start()
-  
   if dig == True:
     pyautogui.typewrite("pls dig")
     waitS()
     pyautogui.press("enter")
-    print(f"[{current_time}] - {Dank} | Successfully sent commmand 'pls dig' ")
+    if printing == True:
+      print(f"[{current_time}] - {Dank} | Successfully sent commmand 'pls dig' ")
   if fish==True:
     pyautogui.typewrite("pls fish")
     waitS()
     pyautogui.press('enter')
-    print(f"[{current_time}] - {Dank} | Successfully sent commmand 'pls fish' ")
+    if printing == True:
+      print(f"[{current_time}] - {Dank} | Successfully sent commmand 'pls fish' ")
     waitS()
     Clickbutn()
   if hunt==True:
     pyautogui.typewrite("pls hunt")
     waitS()
     pyautogui.press('enter')
-    print(f"[{current_time}] - {Dank} | Successfully sent commmand 'pls hunt' ")
+    if printing == True:
+      print(f"[{current_time}] - {Dank} | Successfully sent commmand 'pls hunt' ")
     waitS()
     Clickbutn()
   if beg == True:
     pyautogui.typewrite("pls beg")
     waitS()
     pyautogui.press('enter')
-    print(f"[{current_time}] - {Dank} | Successfully sent commmand 'pls beg' ")
+    if printing == True:
+      print(f"[{current_time}] - {Dank} | Successfully sent commmand 'pls beg' ")
   if search == True:
     pyautogui.typewrite('pls search')
     waitS()
     pyautogui.press('enter')
-    print(f"[{current_time}] - {Dank} | Successfully sent commmand 'pls search' ")
+    if printing == True:
+      print(f"[{current_time}] - {Dank} | Successfully sent commmand 'pls search' ")
     waitS()
     Clickbutn()
   if crime == True:
@@ -230,26 +265,39 @@ while (s):
     waitS()
 
     Clickbutn()
-    print(f"[{current_time}] - {Dank} | Successfully sent commmand 'pls crime' ")
+    if printing == True:
+      print(f"[{current_time}] - {Dank} | Successfully sent commmand 'pls crime' ")
   if pm == True:
     pyautogui.typewrite('pls pm')
     waitS()
     pyautogui.press('enter')
     waitS()
     Clickbutn()
-    print(f"[{current_time}] - {Dank} | Successfully sent commmand 'pls pm' ")
+    if printing == True:
+      print(f"[{current_time}] - {Dank} | Successfully sent commmand 'pls pm' ")
   pyautogui.typewrite('pls sell')
   waitS()
   pyautogui.press('enter')
   waitS()
   Clickbutn()
-  print(f"[{current_time}] - {Dank} | Successfully sent commmand 'pls sell' ")
+  if printing == True:
+    print(f"[{current_time}] - {Dank} | Successfully sent commmand 'pls sell' ")
   pyautogui.leftClick(pos)
   hl()
   waitS()
+  pyautogui.typewrite('pls dep max')
+  waitS()
+  pyautogui.press('enter')
   waste()
   waitS()
   pyautogui.press('enter')
+  if tipjar== True:
+    threading.Timer(360, tip).start()
+  if stock == True:
+    threading.Timer(360, stonk).start()
+  
+  threading.Timer(720, pizza).start()
+  
   waitL()
 
   Clickbutn2()
